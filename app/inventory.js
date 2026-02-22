@@ -103,7 +103,7 @@ function Login({onLogin}){
   return(
     <div style={S.login}><div style={S.loginBox}>
       <div style={{textAlign:"center",marginBottom:24}}>
-        <div style={{fontSize:28,fontWeight:800,color:"#1B3D1B"}}>🌿 Rare Plant Fairy</div>
+        <img src="/logo-login.png" alt="Rare Plant Fairy" style={{width:140,marginBottom:8}}/>
         <div style={{fontSize:12,color:"#8A8A84",marginTop:4}}>Inventory System</div>
       </div>
       {err&&<div style={S.err}>{err}</div>}
@@ -262,7 +262,7 @@ export default function App(){
   return(
     <div style={S.app}>
       <div style={S.sb}>
-        <div style={{padding:"14px 16px",borderBottom:"1px solid rgba(255,255,255,.08)"}}><div style={{fontSize:13,fontWeight:800}}>🌿 Rare Plant Fairy</div><div style={{fontSize:10,opacity:.4,marginTop:1}}>Inventory System</div></div>
+        <div style={{padding:"14px 16px",borderBottom:"1px solid rgba(255,255,255,.08)"}}><img src="/logo-sidebar.png" alt="RPF" style={{width:100,marginBottom:4}}/><div style={{fontSize:10,opacity:.4}}>Inventory System</div></div>
         <div style={{flex:1,padding:"4px 6px",overflowY:"auto"}}>
           {navs.map((n,i)=>n.sec?<div key={i} style={{fontSize:9,fontWeight:700,textTransform:"uppercase",letterSpacing:1.2,opacity:.28,padding:"14px 10px 4px"}}>{n.sec}</div>:<button key={n.k} style={S.ni(dash===n.k)} onClick={()=>{setDash(n.k);setSel(null);setStF("");setZnF("")}}><Ic d={n.ic} s={14}/><span>{n.l}</span>{n.bg?<span style={S.niBg}>{n.bg}</span>:null}</button>)}
         </div>
